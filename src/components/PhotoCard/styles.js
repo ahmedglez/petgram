@@ -3,13 +3,15 @@ import { fadeIn } from '../../animations/ImgFadeIn'
 
 const Article = styled.article`
   border: 1px solid #eaeaea;
-  border-radius: 4px;
-  box-shadow: 0 10px 14px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   margin: 0 auto;
   padding: 0px;
   width: 100%;
   height: auto;
   height: fit-content;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 14px rgba(0, 1, 0, 0.1) inset;
+  padding-bottom: 20px;
   `
 
 const A = styled.a`
@@ -28,6 +30,7 @@ const ImgWrapper = styled.div`
   padding: 56.25% 0 0 0;
   position: relative;
   width: 100%;
+  min-height: 280px;
 `
 
 const Img = styled.img`
@@ -44,8 +47,8 @@ const Img = styled.img`
 const Button = styled.button`
   display: flex;
   align-items: center;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   &[aria-pressed="true"] {
     opacity: 0.5;
   }

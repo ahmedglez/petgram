@@ -23,6 +23,7 @@ export const GlobalStyles = createGlobalStyle`
   height: 100%;
   min-height: 100vh;
   overflow-x: hidden;
+  overflow-y: scroll;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding-bottom: 10px;
 }

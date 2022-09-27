@@ -6,11 +6,11 @@ export const PictureContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: fit-content;
   padding: 0px 0;
   margin: 0;
-  overflow-y:scroll;
-  scroll-behavior: smooth ;
+  overflow-y:hidden;
+  scroll-snap-type: y   mandatory;  
   &::-webkit-scrollbar {
     display: none;
   }
