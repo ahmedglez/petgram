@@ -7,10 +7,13 @@ const CategoriesListContainer = styled.div`
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
+  scroll-snap-type: x   mandatory;
   &::-webkit-scrollbar {
     display: none;
   }
-  height:300px;
+  height:fit-content;
+  padding: 0px 0;
+  margin-bottom: 20px;
 `
 
 const CategoriesListUl = styled.ul`

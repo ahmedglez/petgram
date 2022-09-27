@@ -9,7 +9,16 @@ export const GlobalStyles = createGlobalStyle`
     height: 100vh;
     margin: 0 auto;
     max-width: 500px;
-    overscroll-behavior: none;
+    color: #333;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y   mandatory;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   * {
 }
@@ -20,11 +29,15 @@ export const GlobalStyles = createGlobalStyle`
   align-items: center;
   padding: 0 ;
   width: 100%;
-  height: 100%;
+  height: fit-content;
   min-height: 100vh;
   overflow-x: hidden;
-  overflow-y: scroll;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding-bottom: 10px;
+  overflow-y: scroll;
+  scroll-snap-type: y   mandatory;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 `
