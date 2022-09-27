@@ -2,15 +2,15 @@ import styled from 'styled-components'
 
 const CategoriesListContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  padding: 16px 0;
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
   &::-webkit-scrollbar {
     display: none;
   }
+  height:300px;
 `
 
 const CategoriesListUl = styled.ul`
@@ -19,6 +19,7 @@ const CategoriesListUl = styled.ul`
   &::-webkit-scrollbar {
     display: none;
   }
+  padding: 0px;
 `
 
 const CategoriesListItem = styled.li`

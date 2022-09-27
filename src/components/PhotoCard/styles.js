@@ -1,16 +1,16 @@
 import styled from 'styled-components'
+import { fadeIn } from '../../animations/ImgFadeIn'
 
 const Article = styled.article`
   border: 1px solid #eaeaea;
   border-radius: 4px;
   box-shadow: 0 10px 14px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
   margin: 0 auto;
-  max-width: 800px;
   padding: 0px;
   width: 100%;
-
-`
+  height: auto;
+  height: fit-content;
+  `
 
 const A = styled.a`
   display: flex;
@@ -33,10 +33,12 @@ const ImgWrapper = styled.div`
 const Img = styled.img`
   box-shadow: 0 10px 14px rgba(0, 0, 0, 0.2);
   width: 100%;
+  height: 100%;
   object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
+  ${fadeIn()}
 `
 
 const Button = styled.button`

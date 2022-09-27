@@ -1,8 +1,8 @@
 import React from 'react'
 import { CategoriesList } from './components/CategoriesList'
 import { GlobalStyles } from './styles/GlobalStyles'
-import { PhotoCard } from './components/PhotoCard'
 import Logo from './components/Logo'
+import Feed from './components/Feed'
 
 const App = () => {
   return (
@@ -10,7 +10,7 @@ const App = () => {
       <GlobalStyles />
       <Logo />
       <CategoriesList />
-      <PhotoCard />
+      <Feed />
     </React.Fragment>
 
   )

@@ -3,7 +3,7 @@ import * as React from 'react'
 const Logo = (props) => (
   <svg
     width='300px'
-    height='100px'
+    height='150px'
     xmlns='http://www.w3.org/2000/svg'
     viewBox='56.427 14.333 387.146 121.333'
     style={{
