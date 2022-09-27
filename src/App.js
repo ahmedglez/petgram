@@ -1,9 +1,18 @@
 import React from 'react'
-import { Category } from './components/Category'
+import { CategoriesList } from './components/CategoriesList'
+import { GlobalStyles } from './styles/GlobalStyles'
+import { PhotoCard } from './components/PhotoCard'
+import Logo from './components/Logo'
 
 const App = () => {
   return (
-    <Category />
+    <React.Fragment>
+      <GlobalStyles />
+      <Logo />
+      <CategoriesList />
+      <PhotoCard />
+    </React.Fragment>
+
   )
 }
 
