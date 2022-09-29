@@ -10,7 +10,6 @@ const Article = styled.article`
   height: auto;
   height: fit-content;
   margin-bottom: 25px;
-  box-shadow: 0 10px 14px rgba(0, 1, 0, 0.1) inset;
   padding-bottom: 20px;
   `
 
