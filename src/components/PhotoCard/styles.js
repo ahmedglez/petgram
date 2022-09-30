@@ -7,6 +7,7 @@ const Article = styled.article`
   margin: 0 auto;
   padding: 0px;
   width: 100%;
+  min-height: 500px;
   height: auto;
   height: fit-content;
   margin-bottom: 25px;

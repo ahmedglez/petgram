@@ -6,6 +6,7 @@ flex-direction: column;
 text-decoration: none;
 text-align: center;
 width: 75px;
+padding: 10px;
 `
 
 const Image = style.img`

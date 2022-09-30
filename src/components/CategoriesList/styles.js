@@ -14,8 +14,8 @@ const CategoriesListContainer = styled.div`
   height: fit-content;
   padding: 0px 0;
   margin-bottom: 20px;
-
-  &.fixed {
+  
+  ${({ fixed }) => fixed && `
     position: fixed;
     top: -20px;
     left: 0;
@@ -30,7 +30,7 @@ const CategoriesListContainer = styled.div`
     height: fit-content;
     padding-left: 15px;
     padding-right: 15px;
-  }
+    `}
 `
 
 const CategoriesListUl = styled.ul`
