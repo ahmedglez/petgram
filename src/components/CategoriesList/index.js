@@ -1,9 +1,12 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import { Category } from '../Category'
-import { CategoriesListContainer, CategoriesListUl, CategoriesListItem } from './styles'
-import { categories } from '../../../api/db.json'
+import {
+  CategoriesListContainer,
+  CategoriesListUl,
+  CategoriesListItem
+} from './styles'
 
-const CategoriesList = () => {
+const CategoriesList = ({ categories }) => {
   const [showFixed, setShowFixed] = useState(false)
 
   useEffect(() => {
@@ -17,22 +20,20 @@ const CategoriesList = () => {
 
   const renderList = (fixed) => (
     <CategoriesListContainer fixed={fixed} className={fixed ? 'fixed' : ''}>
-      <CategoriesListUl >
-        {
-          categories.map(category => (
-            <CategoriesListItem key={category.id}>
-              <Category {...category} path={`/pet/${category.id}`} />
-            </CategoriesListItem>
-          ))
-        }
+      <CategoriesListUl>
+        {categories.map((category) => (
+          <CategoriesListItem key={category.id}>
+            <Category {...category} path={`/pet/${category.id}`} />
+          </CategoriesListItem>
+        ))}
       </CategoriesListUl>
     </CategoriesListContainer>
   )
 
   return (
     <Fragment>
-      { renderList()}
-      {showFixed && renderList(true) }
+      {renderList()}
+      {showFixed && renderList(true)}
     </Fragment>
   )
 }

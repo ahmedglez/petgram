@@ -28,6 +28,8 @@ const CategoriesListContainer = styled.div`
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     transform: scale(0.7);
     height: fit-content;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 `
 
