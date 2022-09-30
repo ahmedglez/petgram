@@ -1,4 +1,5 @@
-import React, { Fragment, useEffect, useRef, useState } from 'react'
+import React, { Fragment, useRef, useState } from 'react'
+import { IntersectionObserver } from '../../hooks/useInterceptionObserver'
 import { Article, Img, ImgWrapper, A, Button } from './styles'
 import { MdFavoriteBorder } from 'react-icons/md'
 
@@ -7,20 +8,10 @@ const PhotoCard = ({
   likes = 0,
   src = 'https://images.unsplash.com/photo-1520561805070-83c413349512?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
 }) => {
-  const ref = useRef(null)
   const [show, setShow] = useState(false)
+  const ref = useRef(null)
 
-  useEffect(() => {
-    const observer = new window.IntersectionObserver((entries) => {
-      const { isIntersecting } = entries[0]
-      if (isIntersecting) {
-        console.log('si')
-        setShow(true)
-        observer.disconnect()
-      }
-    })
-    observer.observe(ref.current)
-  }, [ref])
+  IntersectionObserver(ref, () => setShow(true))
 
   return (
     <Article ref={ref}>
