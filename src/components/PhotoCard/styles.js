@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { fadeIn } from '../../animations/ImgFadeIn'
 
 const Article = styled.article`
-  border: 1px solid #eaeaea;
   border-radius: 10px;
   margin: 0 auto;
   padding: 0px;
@@ -59,8 +58,10 @@ const Button = styled.button`
   outline: 0;
   & svg {
     margin-right: 4px;
+    font-size: 2em;
+    color: pink;
   }
-`
+`;
 
 const Span = styled.span`
   display: block;
