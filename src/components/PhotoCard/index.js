@@ -18,18 +18,7 @@ const PhotoCard = ({
   });
   const ref = useRef(null);
 
-  useEffect(() => {
-    if (show === true) {
-      console.group(`Photo Card ${id}`);
-      console.log("ID", id);
-      console.log("LIKED", liked);
-      console.log("KEY", key);
-      console.log("LOCALSTORAGE", window.localStorage.getItem(key));
-      console.log("SRC", src);
-      console.log("LIKES", likes);
-      console.groupEnd();
-    }
-  }, [show])
+  
 
   const setLocalStorage = (id, value) => {
     console.log("setLocalStorage", id, value);

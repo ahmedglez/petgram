@@ -2,7 +2,6 @@ import React from "react";
 import { PhotoCard } from "../PhotoCard";
 import { PictureContainer } from "./styles";
 import { useQuery, gql } from "@apollo/client";
-import { useEffect } from "react";
 
 const withPhotos = gql`
   query getPhotos {
