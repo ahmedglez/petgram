@@ -20,9 +20,7 @@ const withPhotos = gql`
 const Feed = () => {
   const { loading, error, data } = useQuery(withPhotos);
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
+
 
   if (error) {
     return <h2>Internal Server Error</h2>;

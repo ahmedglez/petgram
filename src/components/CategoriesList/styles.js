@@ -1,5 +1,17 @@
-import styled from 'styled-components'
+import styled from "styled-components";
+import { useQuery, gql } from "@apollo/client";
 
+const withCategories = gql`
+  query getCategories {
+    categories {
+      id
+      name
+      emoji
+      cover
+      path
+    }
+  }
+`;
 const CategoriesListContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -14,8 +26,10 @@ const CategoriesListContainer = styled.div`
   height: fit-content;
   padding: 0px 0;
   margin-bottom: 20px;
-  
-  ${({ fixed }) => fixed && `
+
+  ${({ fixed }) =>
+    fixed &&
+    `
     position: fixed;
     top: -20px;
     left: 0;
@@ -29,7 +43,7 @@ const CategoriesListContainer = styled.div`
     transform: scale(0.7);
     height: fit-content;
     `}
-`
+`;
 
 const CategoriesListUl = styled.ul`
   display: flex;
@@ -39,10 +53,10 @@ const CategoriesListUl = styled.ul`
   }
   padding: 0px;
   gap: 0px;
-`
+`;
 
 const CategoriesListItem = styled.li`
   padding: 0 8px;
-`
+`;
 
-export { CategoriesListContainer, CategoriesListUl, CategoriesListItem }
+export { CategoriesListContainer, CategoriesListUl, CategoriesListItem };
