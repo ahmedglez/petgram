@@ -21,15 +21,13 @@ const CategoriesListContainer = styled.div`
     left: 0;
     right: 0;
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 500px;
     z-index: 1;
     background: #fff;
     border-radius: 60px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     transform: scale(0.7);
     height: fit-content;
-    padding-left: 15px;
-    padding-right: 15px;
     `}
 `
 
@@ -40,7 +38,7 @@ const CategoriesListUl = styled.ul`
     display: none;
   }
   padding: 0px;
-  gap: 10px;
+  gap: 0px;
 `
 
 const CategoriesListItem = styled.li`

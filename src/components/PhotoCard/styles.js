@@ -23,7 +23,6 @@ const A = styled.a`
 
 const ImgWrapper = styled.div`
   height: 0;
-  border-radius: 8px;
   display: block;
   overflow: hidden;
   padding: 56.25% 0 0 0;

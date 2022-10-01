@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export const IntersectionObserver = (ref, callback) => {
+export const useIntersectionObserver = (ref, callback) => {
   return useEffect(() => {
     Promise.resolve(
       typeof window.IntersectionObserver !== "undefined"
