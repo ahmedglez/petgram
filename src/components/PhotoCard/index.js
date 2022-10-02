@@ -2,8 +2,7 @@ import React, { Fragment, useRef, useState } from "react";
 import { useIntersectionObserver } from "../../hooks/useInterceptionObserver";
 import { Article, Img, ImgWrapper, A, Button } from "./styles";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
-import { useLocalStorage, setLocalStorage } from "../../hooks/useLocalStorage";
-import { useEffect } from "react";
+import loadingPic from "../../assets/imgs/image-loader.gif";
 
 const PhotoCard = ({
   id,
@@ -18,7 +17,9 @@ const PhotoCard = ({
   });
   const ref = useRef(null);
 
-  
+  {
+    show === false ? (src = loadingPic) : (src = src);
+  }
 
   const setLocalStorage = (id, value) => {
     console.log("setLocalStorage", id, value);

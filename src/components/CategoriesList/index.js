@@ -56,7 +56,7 @@ const CategoriesList = () => {
       <CategoriesListUl>
         {[0, 1, 2, 3, 4].map((category) => (
           <CategoriesListItem key={category.id}>
-            <Category cover={Loading_Pic} />
+            <Category cover={Loading_Pic} emoji='' />
           </CategoriesListItem>
         ))}
       </CategoriesListUl>
