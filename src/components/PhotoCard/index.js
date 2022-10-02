@@ -2,12 +2,11 @@ import React, { Fragment, useRef, useState } from "react";
 import { useIntersectionObserver } from "../../hooks/useInterceptionObserver";
 import { Article, Img, ImgWrapper, A, Button } from "./styles";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
-import loadingPic from "../../assets/gift/image-loader.avif";
 
 const PhotoCard = ({
   id,
   likes = 0,
-  src = "https://images.unsplash.com/photo-1520561805070-83c413349512?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+  src,
 }) => {
   const key = `like-${id}`;
   const [show, setShow] = useState(false);
@@ -17,9 +16,7 @@ const PhotoCard = ({
   });
   const ref = useRef(null);
 
-  {
-    show === false ? (src = loadingPic) : (src = src);
-  }
+ 
 
   const setLocalStorage = (id, value) => {
     try {

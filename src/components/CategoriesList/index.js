@@ -2,32 +2,30 @@
 
 import React, { Fragment, useEffect, useState } from "react";
 import { Category } from "../Category";
-import Loading_Pic from "../../assets/gift/loading-opaque.avif";
-import {
-  CategoriesListContainer,
-  CategoriesListUl,
-  CategoriesListItem,
-} from "./styles";
+import Loading_Pic from "../../assets/gift/category_animation_loader.avif";
+import { CategoriesListContainer, CategoriesListUl } from "./styles";
 import Item from "antd/lib/list/Item";
-import { Spin } from "antd";
+import { useQuery, gql } from "@apollo/client";
+
+const withCategories = gql`
+  query getCategories {
+    categories {
+      id
+      name
+      emoji
+      cover
+      path
+    }
+  }
+`;
 
 const CategoriesList = () => {
   const [showFixed, setShowFixed] = useState(false);
-  const [categories, setCategories] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const { loading, error, data } = useQuery(withCategories);
 
   useEffect(() => {
-    setLoading(true);
-    window
-      .fetch("https://petgram-server-ahmed.vercel.app/categories")
-      .then((res) => res.json())
-      .then((response) => {
-        setCategories(response);
-        setLoading(false);
-      });
-  }, []);
-
- 
+    console.log(data)
+  },[data])
 
   useEffect(() => {
     const onScroll = (e) => {
@@ -40,36 +38,51 @@ const CategoriesList = () => {
   const renderList = (fixed) => (
     <CategoriesListContainer fixed={fixed}>
       <CategoriesListUl>
-        {categories.map((category) => (
+        {data.categories.map((category) => (
           <Item key={category.id}>
-            <Category {...category} />
+            <Category
+              cover={category.cover}
+              path={category.path}
+              emoji={category.emoji}
+            />
           </Item>
         ))}
       </CategoriesListUl>
     </CategoriesListContainer>
   );
 
-  const loadingList = () => (
-    <CategoriesListContainer>
-      <CategoriesListUl>
-        {[0, 1, 2, 3, 4].map((category) => (
-          <CategoriesListItem key={category}>
-            <Category cover={Loading_Pic} emoji='' />
-          </CategoriesListItem>
-        ))}
-      </CategoriesListUl>
-    </CategoriesListContainer>
-  );
+  if (error) {
+    return <h2>Internal Server Error</h2>;
+  }
 
   if (loading === true) {
-    return loadingList();
+    return (
+      <CategoriesListContainer fixed={showFixed}>
+        <CategoriesListUl>
+          {[0,1,2,3,4,5,6].map((index) => (
+            <Item key={index}>
+              <Category cover={Loading_Pic} emoji={""} />
+            </Item>
+          ))}
+        </CategoriesListUl>
+      </CategoriesListContainer>
+    );
   }
 
   return (
-    <Fragment>
-      {renderList()}
-      {showFixed && renderList(true)}
-    </Fragment>
+    <CategoriesListContainer fixed={showFixed}>
+      <CategoriesListUl>
+        {data.categories.map((category) => (
+          <Item key={category.id}>
+            <Category
+              cover={category.cover}
+              path={category.path}
+              emoji={category.emoji}
+            />
+          </Item>
+        ))}
+      </CategoriesListUl>
+    </CategoriesListContainer>
   );
 };
 

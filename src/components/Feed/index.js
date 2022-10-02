@@ -2,6 +2,7 @@ import React from "react";
 import { PhotoCard } from "../PhotoCard";
 import { PictureContainer } from "./styles";
 import { useQuery, gql } from "@apollo/client";
+import loadingPic from "../../assets/gift/pic-animation-loader.avif";
 
 const withPhotos = gql`
   query getPhotos {
@@ -25,8 +26,8 @@ const Feed = () => {
   if (loading) {
     return (
       <PictureContainer>
-        {[0,1,2,3,4].map((index) => (
-          <PhotoCard key={index}  />
+        {[0, 1, 2, 3, 4].map((index) => (
+          <PhotoCard key={index} src={loadingPic} />
         ))}
       </PictureContainer>
     );
