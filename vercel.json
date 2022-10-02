@@ -1,18 +1,18 @@
 {
     "version": 2,
-    "name": "petgram-ahmed",
+    "name": "petgram",
     "builds": [{ "use": "@vercel/static-build", "src": "package.json" }],
     "routes": [
         {
-            "src": "(.*).js",
-            "dest": "/$1.js"
+            "src":"/public/(.*)" ,
+            "dest": "/public/$2"
         },
         {
-            "src": "(.*).json",
-            "dest": "/$1.json"
+            "src": "/(.*)",
+            "dest": "vercel.json"
         },
         {
-            "src": "/.*",
+            "src": "/public/(.*)",
             "dest": "index.html"
         }
     ]

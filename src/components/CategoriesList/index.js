@@ -2,7 +2,6 @@
 
 import React, { Fragment, useEffect, useState } from "react";
 import { Category } from "../Category";
-import Loading_Pic from "../../assets/gift/category_animation_loader.avif";
 import { CategoriesListContainer, CategoriesListUl } from "./styles";
 import Item from "antd/lib/list/Item";
 import { useQuery, gql } from "@apollo/client";
@@ -24,8 +23,8 @@ const CategoriesList = () => {
   const { loading, error, data } = useQuery(withCategories);
 
   useEffect(() => {
-    console.log(data)
-  },[data])
+    console.log(data);
+  }, [data]);
 
   useEffect(() => {
     const onScroll = (e) => {
@@ -52,21 +51,15 @@ const CategoriesList = () => {
   );
 
   if (error) {
+    console.log(
+      "🚀 ~ file: index.js ~ line 55 ~ CategoriesList ~ error",
+      error
+    );
     return <h2>Internal Server Error</h2>;
   }
 
   if (loading === true) {
-    return (
-      <CategoriesListContainer fixed={showFixed}>
-        <CategoriesListUl>
-          {[0,1,2,3,4,5,6].map((index) => (
-            <Item key={index}>
-              <Category cover={Loading_Pic} emoji={""} />
-            </Item>
-          ))}
-        </CategoriesListUl>
-      </CategoriesListContainer>
-    );
+    return <h1>Loading...</h1>;
   }
 
   return (

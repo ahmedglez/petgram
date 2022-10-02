@@ -2,12 +2,9 @@ import React, { Fragment, useRef, useState } from "react";
 import { useIntersectionObserver } from "../../hooks/useInterceptionObserver";
 import { Article, Img, ImgWrapper, A, Button } from "./styles";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { useEffect } from "react";
 
-const PhotoCard = ({
-  id,
-  likes = 0,
-  src,
-}) => {
+const PhotoCard = ({ id, likes = 0, src }) => {
   const key = `like-${id}`;
   const [show, setShow] = useState(false);
   const [liked, setLiked] = useState(() => {
@@ -15,8 +12,6 @@ const PhotoCard = ({
     return isLiked ? JSON.parse(isLiked) : false;
   });
   const ref = useRef(null);
-
- 
 
   const setLocalStorage = (id, value) => {
     try {
@@ -35,7 +30,7 @@ const PhotoCard = ({
         <Fragment>
           <A href={`/detail/${id}`}>
             <ImgWrapper>
-              <Img src={src} alt="" />
+              <Img src={src} />
             </ImgWrapper>
           </A>
 
