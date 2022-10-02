@@ -2,7 +2,7 @@ import React, { Fragment, useRef, useState } from "react";
 import { useIntersectionObserver } from "../../hooks/useInterceptionObserver";
 import { Article, Img, ImgWrapper, A, Button } from "./styles";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
-import loadingPic from "../../assets/gifts/pic-animation-loader.avif";
+import loadingPic from "../../assets/gift/image-loader.avif";
 
 const PhotoCard = ({
   id,
@@ -22,7 +22,6 @@ const PhotoCard = ({
   }
 
   const setLocalStorage = (id, value) => {
-    console.log("setLocalStorage", id, value);
     try {
       localStorage.setItem(key, value);
       setLiked(value);

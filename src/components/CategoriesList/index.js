@@ -2,7 +2,7 @@
 
 import React, { Fragment, useEffect, useState } from "react";
 import { Category } from "../Category";
-import Loading_Pic from "../../assets/gift/category_animation_loader.avif";
+import Loading_Pic from "../../assets/gift/loading-opaque.avif";
 import {
   CategoriesListContainer,
   CategoriesListUl,
@@ -27,9 +27,7 @@ const CategoriesList = () => {
       });
   }, []);
 
-  useEffect(() => {
-    console.log(loading);
-  }, [loading]);
+ 
 
   useEffect(() => {
     const onScroll = (e) => {
@@ -55,7 +53,7 @@ const CategoriesList = () => {
     <CategoriesListContainer>
       <CategoriesListUl>
         {[0, 1, 2, 3, 4].map((category) => (
-          <CategoriesListItem key={category.id}>
+          <CategoriesListItem key={category}>
             <Category cover={Loading_Pic} emoji='' />
           </CategoriesListItem>
         ))}

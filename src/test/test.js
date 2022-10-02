@@ -209,9 +209,10 @@ const initialValue = {
   ],
 };
 
-
 const id = "7ec3d2f0-641e-11e9-9d5d-1b8ad05606d1";
 
 const target = initialValue.users.find((user) => user.id === id);
-initialValue.users[initialValue.users.indexOf(target)] = { ...target, liked: false }
-console.log(initialValue.users)
+initialValue.users[initialValue.users.indexOf(target)] = {
+  ...target,
+  liked: false,
+};
