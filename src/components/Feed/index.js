@@ -2,7 +2,7 @@ import React from "react";
 import { PhotoCard } from "../PhotoCard";
 import { PictureContainer } from "./styles";
 import { useQuery, gql } from "@apollo/client";
-import loadingPic from "../../assets/imgs/image-loader.gif";
+import loadingPic from "../../assets/gift/pic-animation-loader.avif";
 
 const withPhotos = gql`
   query getPhotos {

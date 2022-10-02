@@ -2,7 +2,7 @@
 
 import React, { Fragment, useEffect, useState } from "react";
 import { Category } from "../Category";
-import Loading_Pic from "../../assets/imgs/loading-opaque.gif";
+import Loading_Pic from "../../assets/gift/category_animation_loader.avif";
 import {
   CategoriesListContainer,
   CategoriesListUl,

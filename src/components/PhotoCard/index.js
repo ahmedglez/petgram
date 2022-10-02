@@ -2,7 +2,7 @@ import React, { Fragment, useRef, useState } from "react";
 import { useIntersectionObserver } from "../../hooks/useInterceptionObserver";
 import { Article, Img, ImgWrapper, A, Button } from "./styles";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
-import loadingPic from "../../assets/imgs/image-loader.gif";
+import loadingPic from "../../assets/gifts/pic-animation-loader.avif";
 
 const PhotoCard = ({
   id,
