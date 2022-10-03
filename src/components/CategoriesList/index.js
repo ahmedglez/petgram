@@ -59,7 +59,17 @@ const CategoriesList = () => {
   }
 
   if (loading === true) {
-    return <h1>Loading...</h1>;
+    return (
+      <CategoriesListContainer fixed={showFixed}>
+        <CategoriesListUl>
+          {[0, 1, 2, 3, 4, 5, 6].map((index) => (
+            <Item key={index}>
+              <Category />
+            </Item>
+          ))}
+        </CategoriesListUl>
+      </CategoriesListContainer>
+    );
   }
 
   return (

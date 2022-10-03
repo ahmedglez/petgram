@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { fadeIn } from '../../animations/ImgFadeIn'
+import styled from "styled-components";
+import { fadeIn } from "../../animations/ImgFadeIn";
 
 const Article = styled.article`
   border-radius: 10px;
@@ -11,15 +11,14 @@ const Article = styled.article`
   height: fit-content;
   margin-bottom: 25px;
   padding-bottom: 20px;
-  `
+`;
 
 const A = styled.a`
   display: flex;
-  width: 100%;    
+  width: 100%;
   text-decoration: none;
   color: #888;
-
-`
+`;
 
 const ImgWrapper = styled.div`
   height: 0;
@@ -29,7 +28,7 @@ const ImgWrapper = styled.div`
   position: relative;
   width: 100%;
   min-height: 280px;
-`
+`;
 
 const Img = styled.img`
   box-shadow: 0 10px 14px rgba(0, 0, 0, 0.2);
@@ -40,7 +39,7 @@ const Img = styled.img`
   top: 0;
   left: 0;
   ${fadeIn()}
-`
+`;
 
 const Button = styled.button`
   display: flex;
@@ -65,16 +64,16 @@ const Button = styled.button`
 const Span = styled.span`
   display: block;
   padding-left: 8px;
-`
+`;
 
 const Svg = styled.svg`
   height: 32px;
   width: 32px;
   text-align: center;
   fill: #d8d8d8;
+`;
 
-`
 
-const Path = styled.path``
+const Path = styled.path``;
 
-export { Article, Img, ImgWrapper, A, Button, Span, Svg, Path }
+export { Article, Img, ImgWrapper, A, Button, Span, Svg, Path };

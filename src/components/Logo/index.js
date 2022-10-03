@@ -3,12 +3,11 @@ import * as React from 'react'
 const Logo = (props) => (
   <svg
     width='300px'
-    height='150px'
+    height='100px'
     xmlns='http://www.w3.org/2000/svg'
     viewBox='56.427 14.333 387.146 121.333'
     style={{
-      background: '0 0'
-    }}
+      background: '0 0'    }}
     preserveAspectRatio='xMidYMid'
     {...props}
   >
