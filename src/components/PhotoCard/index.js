@@ -4,13 +4,10 @@ import { Article, Img, ImgWrapper, A, Button } from "./styles";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { useEffect } from "react";
 
-const PhotoCard = ({ id, likes = 0, src }) => {
+const PhotoCard = ({ id, likes = 0, src, liked }) => {
   const key = `like-${id}`;
   const [show, setShow] = useState(false);
-  const [liked, setLiked] = useState(() => {
-    const isLiked = window.localStorage.getItem(key);
-    return isLiked ? JSON.parse(isLiked) : false;
-  });
+  
   const ref = useRef(null);
 
   const setLocalStorage = (id, value) => {
@@ -28,7 +25,7 @@ const PhotoCard = ({ id, likes = 0, src }) => {
     <Article ref={ref}>
       {show && (
         <Fragment>
-          <A href={`/detail/${id}`}>
+          <A href={`/?detail=${id}`}>
             <ImgWrapper>
               <Img src={src} />
             </ImgWrapper>

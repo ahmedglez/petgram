@@ -22,9 +22,7 @@ const CategoriesList = () => {
   const [showFixed, setShowFixed] = useState(false);
   const { loading, error, data } = useQuery(withCategories);
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
+ 
 
   useEffect(() => {
     const onScroll = (e) => {

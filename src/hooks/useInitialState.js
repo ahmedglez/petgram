@@ -6,7 +6,6 @@ const useInitialState = () => {
   const [state, setState] = useState(null);
 
   useEffect(() => {
-    console.log("useInitialState");
     localStorage.saveInitialState();
     setState(localStorage.getItem("state"));
   }, []);
