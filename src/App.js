@@ -10,7 +10,7 @@ const App = () => {
       <GlobalStyles />
       <Logo />
       <CategoriesList />
-      <Feed />
+      <Feed categoryId={2}/>
     </Fragment>
   )
 }

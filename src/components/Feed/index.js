@@ -4,8 +4,8 @@ import { PictureContainer, PictureSkeleton } from "./styles";
 import { useQuery, gql } from "@apollo/client";
 
 const withPhotos = gql`
-  query getPhotos {
-    photos {
+  query getPhotos($categoryId: ID) {
+    photos(categoryId: $categoryId) {
       id
       categoryId
       src
@@ -16,8 +16,10 @@ const withPhotos = gql`
   }
 `;
 
-const Feed = () => {
-  const { loading, error, data } = useQuery(withPhotos);
+const Feed = ({ categoryId }) => {
+  const { loading, error, data } = useQuery(withPhotos, {
+    variables: { categoryId: categoryId },
+  });
 
   if (error) {
     return <h2>Internal Server Error</h2>;
