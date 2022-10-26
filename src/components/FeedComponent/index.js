@@ -1,26 +1,8 @@
 import React from "react";
 import { PhotoCard } from "../PhotoCard";
 import { PictureContainer, PictureSkeleton } from "./styles";
-import { useQuery, gql } from "@apollo/client";
 
-const withPhotos = gql`
-  query getPhotos($categoryId: ID) {
-    photos(categoryId: $categoryId) {
-      id
-      categoryId
-      src
-      likes
-      userId
-      liked
-    }
-  }
-`;
-
-const Feed = ({ categoryId }) => {
-  const { loading, error, data } = useQuery(withPhotos, {
-    variables: { categoryId: categoryId },
-  });
-
+const FeedComponent = ({ data, loading, error }) => {
   if (error) {
     return <h2>Internal Server Error</h2>;
   }
@@ -39,4 +21,4 @@ const Feed = ({ categoryId }) => {
   );
 };
 
-export default Feed;
+export default FeedComponent;
