@@ -1,10 +1,10 @@
 import React from "react";
 import FeedComponent from "../components/FeedComponent";
-import { GET_SINGLE_PHOTO } from "../hoc/withPhotos";
+import { GET_PHOTOS } from "../hoc/withPhotos";
 import { useQuery } from "@apollo/client";
 
 const Feed = ({categoryId}) => {
-  const { loading, error, data } = useQuery(GET_SINGLE_PHOTO, {
+  const { loading, error, data } = useQuery(GET_PHOTOS, {
     variables: { categoryId: categoryId },
   });
 

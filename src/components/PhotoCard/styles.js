@@ -41,26 +41,6 @@ const Img = styled.img`
   ${fadeIn()}
 `;
 
-const Button = styled.button`
-  display: flex;
-  align-items: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  &[aria-pressed="true"] {
-    opacity: 0.5;
-  }
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  color: #888;
-  outline: 0;
-  & svg {
-    margin-right: 4px;
-    font-size: 2em;
-    color: pink;
-  }
-`;
-
 const Span = styled.span`
   display: block;
   padding-left: 8px;
@@ -73,7 +53,6 @@ const Svg = styled.svg`
   fill: #d8d8d8;
 `;
 
-
 const Path = styled.path``;
 
-export { Article, Img, ImgWrapper, A, Button, Span, Svg, Path };
+export { Article, Img, ImgWrapper, A, Span, Svg, Path };

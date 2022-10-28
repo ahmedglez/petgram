@@ -16,6 +16,7 @@ const GET_SINGLE_PHOTO = gql`
   }
 `;
 
+
 const renderProps = (loading, error, data) => {
   if (error) {
     return <h2>Internal Server Error</h2>;

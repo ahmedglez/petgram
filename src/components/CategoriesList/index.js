@@ -22,8 +22,6 @@ const CategoriesList = () => {
   const [showFixed, setShowFixed] = useState(false);
   const { loading, error, data } = useQuery(withCategories);
 
- 
-
   useEffect(() => {
     const onScroll = (e) => {
       const newShowFixed = document.body.scrollTop > 300;
