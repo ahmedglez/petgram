@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
-import { CategoriesList } from "./components/CategoriesList";
 import { GlobalStyles } from "./styles/GlobalStyles";
 import Logo from "./components/Logo";
-import Feed from "./container/Feed";
 import PhotoDetails from "./container/PhotoDetails";
+import Home from "./pages/Home";
+import { Router } from "@reach/router";
 
 const App = () => {
   const urlParams = new window.URLSearchParams(window.location.search);
@@ -15,10 +15,10 @@ const App = () => {
       {detailId ? (
         <PhotoDetails id={detailId} />
       ) : (
-        <Fragment>
-          <CategoriesList />
-          <Feed />
-        </Fragment>
+        <Router>
+            <Home path="/" />
+            <Home path="/pet/:id" />
+        </Router>
       )}
     </Fragment>
   );

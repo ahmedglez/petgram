@@ -7,7 +7,6 @@ const Article = styled.article`
   padding: 0px;
   width: 100%;
   min-height: 500px;
-  height: auto;
   height: fit-content;
   margin-bottom: 25px;
   padding-bottom: 20px;
@@ -28,6 +27,7 @@ const ImgWrapper = styled.div`
   position: relative;
   width: 100%;
   min-height: 280px;
+  border-radius: 10px;
 `;
 
 const Img = styled.img`

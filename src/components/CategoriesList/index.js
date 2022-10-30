@@ -75,7 +75,7 @@ const CategoriesList = () => {
           <Item key={category.id}>
             <Category
               cover={category.cover}
-              path={category.path}
+              path={`/pet/${category.id}`}
               emoji={category.emoji}
             />
           </Item>
@@ -85,4 +85,4 @@ const CategoriesList = () => {
   );
 };
 
-export { CategoriesList };
+export default CategoriesList;
