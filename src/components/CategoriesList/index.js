@@ -2,7 +2,11 @@
 
 import React, { Fragment, useEffect, useState } from "react";
 import { Category } from "../Category";
-import { CategoriesListContainer, CategoriesListUl } from "./styles";
+import {
+  CategoriesContainer,
+  CategoriesListContainer,
+  CategoriesListUl,
+} from "./styles";
 import Item from "antd/lib/list/Item";
 import { useQuery, gql } from "@apollo/client";
 
@@ -24,7 +28,7 @@ const CategoriesList = () => {
 
   useEffect(() => {
     const onScroll = (e) => {
-      const newShowFixed = document.body.scrollTop > 300;
+      const newShowFixed = document.body.scrollTop > 350;
       setShowFixed(newShowFixed);
     };
     document.body.addEventListener("scroll", onScroll);
@@ -69,8 +73,8 @@ const CategoriesList = () => {
   }
 
   return (
-    <CategoriesListContainer fixed={showFixed}>
-      <CategoriesListUl>
+    <CategoriesListContainer>
+      <CategoriesListUl fixed={showFixed}>
         {data.categories.map((category) => (
           <Item key={category.id}>
             <Category

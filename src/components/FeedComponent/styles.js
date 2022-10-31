@@ -6,6 +6,7 @@ export const PictureContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  min-width: 360px;
   height: max-content;
   padding: 0px 0;
   margin: 0;
@@ -17,6 +18,7 @@ export const PictureContainer = styled.div`
   border: 1px solid #eaeaea;
   box-shadow: 0 10px 14px rgba(0, 1, 0, 0.1) inset;
   border-radius: 10px;
+  row-gap: 20px;
 `;
 
 export const PictureSkeleton = styled.div`

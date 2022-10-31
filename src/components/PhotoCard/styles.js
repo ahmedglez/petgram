@@ -6,8 +6,9 @@ const Article = styled.article`
   margin: 0 auto;
   padding: 0px;
   width: 100%;
+  min-width: 360px;
   min-height: 500px;
-  height: fit-content;
+  height: auto;
   margin-bottom: 25px;
   padding-bottom: 20px;
 `;

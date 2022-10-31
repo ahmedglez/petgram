@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   html, body {
@@ -25,6 +25,7 @@ export const GlobalStyles = createGlobalStyle`
 
 #app {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   padding: 0 ;
@@ -40,4 +41,4 @@ export const GlobalStyles = createGlobalStyle`
     display: none;
   }
 }
-`
+`;

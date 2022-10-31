@@ -20,6 +20,7 @@ const Button = styled.button`
     font-size: 2em;
     color: pink;
   }
+  margin-left: 5%;
 `;
 
 export { Button };

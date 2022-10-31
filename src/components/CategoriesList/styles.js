@@ -12,6 +12,23 @@ const withCategories = gql`
     }
   }
 `;
+
+const CategoriesContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  height: fit-content;
+  padding: 0px 0;
+  margin-bottom: 20px;
+`;
+
 const CategoriesListContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -26,12 +43,27 @@ const CategoriesListContainer = styled.div`
   height: fit-content;
   padding: 0px 0;
   margin-bottom: 20px;
+`;
 
+const CategoriesListUl = styled.ul`
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  padding: 0px;
+  gap: 0px;
   ${({ fixed }) =>
     fixed &&
     `
     position: fixed;
-    top: -20px;
+    top: -15px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -45,18 +77,13 @@ const CategoriesListContainer = styled.div`
     `}
 `;
 
-const CategoriesListUl = styled.ul`
-  display: flex;
-  list-style: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  padding: 0px;
-  gap: 0px;
-`;
-
 const CategoriesListItem = styled.li`
   padding: 0 8px;
 `;
 
-export { CategoriesListContainer, CategoriesListUl, CategoriesListItem };
+export {
+  CategoriesContainer,
+  CategoriesListContainer,
+  CategoriesListUl,
+  CategoriesListItem,
+};
