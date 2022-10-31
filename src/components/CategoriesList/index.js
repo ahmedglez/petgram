@@ -2,11 +2,7 @@
 
 import React, { Fragment, useEffect, useState } from "react";
 import { Category } from "../Category";
-import {
-  CategoriesContainer,
-  CategoriesListContainer,
-  CategoriesListUl,
-} from "./styles";
+import { CategoriesListContainer, CategoriesListUl } from "./styles";
 import Item from "antd/lib/list/Item";
 import { useQuery, gql } from "@apollo/client";
 
@@ -35,8 +31,8 @@ const CategoriesList = () => {
   }, []);
 
   const renderList = (fixed) => (
-    <CategoriesListContainer fixed={fixed}>
-      <CategoriesListUl>
+    <CategoriesListContainer>
+      <CategoriesListUl fixed={fixed}>
         {data.categories.map((category) => (
           <Item key={category.id}>
             <Category
@@ -60,8 +56,8 @@ const CategoriesList = () => {
 
   if (loading === true) {
     return (
-      <CategoriesListContainer fixed={showFixed}>
-        <CategoriesListUl>
+      <CategoriesListContainer>
+        <CategoriesListUl fixed={showFixed}>
           {[0, 1, 2, 3, 4, 5, 6].map((index) => (
             <Item key={index}>
               <Category />
