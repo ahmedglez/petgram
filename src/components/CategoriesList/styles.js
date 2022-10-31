@@ -1,17 +1,4 @@
 import styled from "styled-components";
-import { useQuery, gql } from "@apollo/client";
-
-const withCategories = gql`
-  query getCategories {
-    categories {
-      id
-      name
-      emoji
-      cover
-      path
-    }
-  }
-`;
 
 
 const CategoriesListContainer = styled.div`
@@ -27,6 +14,7 @@ const CategoriesListContainer = styled.div`
   }
   height: 185px;
   padding: 0px 0;
+  max-width: 500px;
 `;
 
 const CategoriesListUl = styled.ul`
@@ -65,8 +53,4 @@ const CategoriesListItem = styled.li`
   padding: 0 8px;
 `;
 
-export {
-  CategoriesListContainer,
-  CategoriesListUl,
-  CategoriesListItem,
-};
+export { CategoriesListContainer, CategoriesListUl, CategoriesListItem };

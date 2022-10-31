@@ -7,10 +7,8 @@ const Article = styled.article`
   padding: 0px;
   width: 100%;
   min-width: 360px;
-  min-height: 500px;
+  max-width: 500px;
   height: auto;
-  margin-bottom: 25px;
-  padding-bottom: 20px;
 `;
 
 const A = styled.a`

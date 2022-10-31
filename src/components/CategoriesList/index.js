@@ -24,7 +24,7 @@ const CategoriesList = () => {
 
   useEffect(() => {
     const onScroll = (e) => {
-      const newShowFixed = document.body.scrollTop > 350;
+      const newShowFixed = document.body.scrollTop > 300;
       setShowFixed(newShowFixed);
     };
     document.body.addEventListener("scroll", onScroll);
