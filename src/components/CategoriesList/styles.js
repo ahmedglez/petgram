@@ -6,6 +6,7 @@ const CategoriesListContainer = styled.div`
   flex-direction: row;
   align-items: center;
   width: 100%;
+  max-width: 380px;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
@@ -14,7 +15,6 @@ const CategoriesListContainer = styled.div`
   }
   height: 185px;
   padding: 0px 0;
-  max-width: 500px;
 `;
 
 const CategoriesListUl = styled.ul`
@@ -39,7 +39,7 @@ const CategoriesListUl = styled.ul`
     left: 0;
     right: 0;
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 380px;
     z-index: 1;
     background: #fff;
     border-radius: 60px;

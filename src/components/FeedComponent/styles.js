@@ -6,8 +6,9 @@ export const PictureContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-width: 360px;
-  height: max-content;
+  max-width: 380px;
+  margin: 0 auto;
+  height: fit-content;
   padding: 0px 0;
   margin: 0;
   overflow-y: hidden;

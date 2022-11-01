@@ -2,9 +2,9 @@
 import React from "react";
 import { Anchor, Image, ImgSkeleton } from "./styles.js";
 
-const Category = ({ cover, path, emoji }) => {
+const Category = ({ cover, path='#', emoji }) => {
   return (
-    <Anchor href={path}>
+    <Anchor to={path}>
       {cover === undefined ? <ImgSkeleton /> : <Image src={cover} />}
       {emoji}
     </Anchor>
