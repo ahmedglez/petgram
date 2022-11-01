@@ -2,7 +2,7 @@ import React from "react";
 import { Nav, Link } from "./styles";
 import { BiHomeAlt, BiStar, BiUser } from "react-icons/bi";
 
-const SIZE = "32px";
+const SIZE = "30px";
 const NavBar = () => {
   return (
     <Nav>
