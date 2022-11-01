@@ -1,7 +1,7 @@
 import style from "styled-components";
-import { Link } from "@reach/router";
+import { Link as LinkRouter } from "@reach/router";
 
-const Anchor = style(Link)`
+const Link = style(LinkRouter)`
 display: flex;
 flex-direction: column;
 text-decoration: none;
@@ -45,4 +45,4 @@ animation: 1s ease-in-out 0s infinite normal none running loading;
 }
 `;
 
-export { Anchor, Image, ImgSkeleton };
+export { Link, Image, ImgSkeleton };

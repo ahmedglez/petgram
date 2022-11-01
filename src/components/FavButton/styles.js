@@ -18,7 +18,7 @@ const Button = styled.button`
   & svg {
     margin-right: 4px;
     font-size: 2em;
-    color: pink;
+    color: #CE7B91;
   }
   margin-left: 5%;
 `;

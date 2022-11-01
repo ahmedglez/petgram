@@ -1,13 +1,13 @@
 /* eslint-disable camelcase */
 import React from "react";
-import { Anchor, Image, ImgSkeleton } from "./styles.js";
+import { Link, Image, ImgSkeleton } from "./styles.js";
 
 const Category = ({ cover, path='#', emoji }) => {
   return (
-    <Anchor to={path}>
+    <Link to={path}>
       {cover === undefined ? <ImgSkeleton /> : <Image src={cover} />}
       {emoji}
-    </Anchor>
+    </Link>
   );
 };
 

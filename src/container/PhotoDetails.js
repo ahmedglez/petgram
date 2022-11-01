@@ -16,7 +16,6 @@ const GET_SINGLE_PHOTO = gql`
   }
 `;
 
-
 const renderProps = (loading, error, data) => {
   if (error) {
     return <h2>Internal Server Error</h2>;
@@ -33,7 +32,7 @@ const PhotoDetails = ({ id }) => {
       id: id,
     },
   });
-  renderProps(loading, error, data);
+  return renderProps(loading, error, data);
 };
 
 export default PhotoDetails;

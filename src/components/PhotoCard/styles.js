@@ -25,8 +25,8 @@ const ImgWrapper = styled.div`
   padding: 56.25% 0 0 0;
   position: relative;
   width: 100%;
-  min-height: 280px;
   border-radius: 10px;
+  height: 200px;
 `;
 
 const Img = styled.img`
