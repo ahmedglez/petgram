@@ -6,7 +6,7 @@ const CategoriesListContainer = styled.div`
   flex-direction: row;
   align-items: center;
   width: 100%;
-  max-width: 380px;
+  max-width: 400px;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;

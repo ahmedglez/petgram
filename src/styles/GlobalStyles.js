@@ -8,7 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     background-color: #fefefe;
     height: 100vh;
     margin: 0 auto;
-    max-width: 380px;
+    max-width: 500px;
     color: #333;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
