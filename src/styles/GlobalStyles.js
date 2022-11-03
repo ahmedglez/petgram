@@ -40,7 +40,7 @@ export const GlobalStyles = createGlobalStyle`
   &::-webkit-scrollbar {
     display: none;
   }
-  background-color: #F1F7EE;
+  background-color: #E0F5EE;
   padding-bottom: 55px;
 }
 `;

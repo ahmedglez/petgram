@@ -35,12 +35,6 @@ const PhotoCard = ({ id, likes = 0, src = DEFAULT_IMAGE }) => {
     setLiked(!liked);
   };
 
-  console.log("{ mutation, mutationLoading, mutationError }", {
-    mutation,
-    mutationLoading,
-    mutationError,
-  });
-
   useIntersectionObserver(ref, () => setShow(true));
 
   return (
