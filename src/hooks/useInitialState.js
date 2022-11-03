@@ -3,7 +3,7 @@ import { useState } from "react";
 const useInitialState = () => {
   const [isAuth, setIsAuth] = useState(false);
 
-  const activeAuth = () => {
+  const activateAuth = () => {
     setIsAuth(true);
   };
 
@@ -17,7 +17,7 @@ const useInitialState = () => {
 
   return {
     isAuth,
-    activeAuth,
+    activateAuth,
     inactiveAuth,
     toogleAuth,
   };

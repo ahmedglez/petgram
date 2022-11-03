@@ -74,20 +74,7 @@ export const Logo = styled.img`
   background-position: center;
   background-size: contain;
   object-fit: cover;
-  -webkit-transform: scale(1.4);
-  transform: scale(1.4);
+  -webkit-transform: scale(1.7);
+  transform: scale(1.7);
 `;
 
-export const LogoSkeleton = styled.div`
-  width: 100%;
-  max-width: 225px;
-  max-height: 180px;
-  margin: 0 auto;
-  display: block;
-  background-position: center;
-  background-size: contain;
-  object-fit: cover;
-  -webkit-transform: scale(1.4);
-  transform: scale(1.4);
-  background-color: #e0e0e0;
-`;

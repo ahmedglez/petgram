@@ -1,15 +1,19 @@
 import React, { useContext } from "react";
 import UserForm from "../components/UserForm";
 import AppContext from "../context/AppContext";
+import { useRegisterMutation } from "../container/RegisterMutation";
 
 const NotRegisteredUser = () => {
-  const { activeAuth } = useContext(AppContext);
+  const { registerMutation } = useRegisterMutation();
+  const { activateAuth } = useContext(AppContext);
+  const onSubmit = ({ email, password }) => {
+    const input = { email, password };
+    const variables = { input };
+    registerMutation({ variables }).then(activateAuth);
+  };
   return (
     <>
-      <UserForm
-        title="Inicia sesión con tu cuenta de Petgram y disfruta de miles de fotos de tus mascotas favoritas."
-        onSubmit={activeAuth}
-      />
+      <UserForm onSubmit={onSubmit} title="Registrarse" />
     </>
   );
 };
