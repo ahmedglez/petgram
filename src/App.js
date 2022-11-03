@@ -14,7 +14,6 @@ import useInitialState from "./hooks/useInitialState";
 const App = () => {
   const initialState = useInitialState();
   const { isAuth } = initialState;
-  console.log(isAuth);
   const UserLogged = ({ children }) => {
     return children(isAuth);
   };

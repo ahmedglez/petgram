@@ -41,5 +41,6 @@ export const GlobalStyles = createGlobalStyle`
     display: none;
   }
   background-color: #F1F7EE;
+  padding-bottom: 55px;
 }
 `;
