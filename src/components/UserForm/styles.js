@@ -78,3 +78,29 @@ export const Logo = styled.img`
   transform: scale(1.7);
 `;
 
+export const Spinner = styled.div`
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+
+
+
+
+export const Error = styled.span`
+  font-size: 0.8em;
+  color: #ff0000;
+  font-weight: 500;
+  padding: 8px 0;
+  text-align: center;
+`;
+
+

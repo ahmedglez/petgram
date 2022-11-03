@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { gql, useMutation } from "@apollo/client";
 
 const REGISTER = gql`
@@ -8,7 +8,9 @@ const REGISTER = gql`
 `;
 export const useRegisterMutation = () => {
   const [registerMutation] = useMutation(REGISTER);
+  const register = ({ input }) => {
+    return registerMutation({ variables: { input } });
+  };
 
-  return { registerMutation };
+  return { registerMutation, register };
 };
-

@@ -1,9 +1,19 @@
 import React, { Fragment } from "react";
 import useInputValue from "../../hooks/useInputValue";
 import dogIcon from "../../assets/login.svg";
-import { Form, Input, Button, Title, Link, P, Logo } from "./styles";
+import {
+  Form,
+  Input,
+  Button,
+  Title,
+  Link,
+  P,
+  Logo,
+  Spinner,
+  Error,
+} from "./styles";
 
-const UserForm = ({ onSubmit, title }) => {
+const UserForm = ({ onSubmit, title, loadingAuth }) => {
   const email = useInputValue("");
   const password = useInputValue("");
   /* wait until dogIcon is loaded */
@@ -22,12 +32,22 @@ const UserForm = ({ onSubmit, title }) => {
   return (
     <Fragment>
       {loading ? null : (
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} disabled={loadingAuth}>
           <Logo src={dogIcon} alt="Petgram" />
           <Title>{title}</Title>
-          <Input type="email" placeholder="Email" {...email} />
-          <Input type="password" placeholder="Password" {...password} />
-          <Button>Iniciar Sesión</Button>
+          <Input
+            type="email"
+            placeholder="Email"
+            {...email}
+            disabled={loadingAuth}
+          />
+          <Input
+            type="password"
+            placeholder="Password"
+            {...password}
+            disabled={loadingAuth}
+          />
+          <Button disabled={loadingAuth}>Iniciar Sesión</Button>
           <P>
             No tienes una cuenta?
             <Link to="/signup"> Regístrate</Link>
